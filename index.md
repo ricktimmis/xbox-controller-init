@@ -1,37 +1,39 @@
-## Welcome to GitHub Pages
+## Xbox Controller Init
+#### Xbox 360 and Xbox One Controller Utility for Linux
 
-You can use the [editor on GitHub](https://github.com/ricktimmis/xbox-controller-init/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Summary
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Inspired from my struggle to get my 'wired' Xbox One S Pad to function on Ubuntu Linux. When plugged in, the controller
+leds flash on/off continously. Despite that tools such as jstest-gtk see the device, non of the buttoms or axes deliver
+any input.
 
-### Markdown
+Within steam there used to an 'identify' button within the Settings > Controller section but this was removed by an
+update. The identify button would actuate the Controllers Haptics, and this would wake / intialise the controller and Voila!
+everything would be working. But,alas no more..
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+In trying to get to the bottom of the issue, I came across fftest a command line utility which was able to drive the
+contollers haptics, and also wake/initiliase it.
 
-```markdown
-Syntax highlighted code block
+However, fftest is an interactive cli utility, and what I really wanted was something that could be wrapped in a startup
+script, or fired by udev to enable hotplug wake/initliase when the controller was plugged in.
 
-# Header 1
-## Header 2
-### Header 3
+Allow me to introduce xbox-controller-init
 
-- Bulleted
-- List
+Check out the [Repo](https://github.com/ricktimmis/xbox-controller-init) for the code and install instructions
 
-1. Numbered
-2. List
+### Get intouch
 
-**Bold** and _Italic_ and `Code` text
+Please do reach out, open a PR, or an Issue or just to say hi if it solved an issue for you too.
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Some Common search keywords strings that folks search for when trying to fix this problem
 
-### Jekyll Themes
+I've included these so that hopefully others having this issue might find this solution.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ricktimmis/xbox-controller-init/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+* xboxdrv no controller found
+* Xbox360 wired controller blinking, device detected but buttons not working
+* Xbox One contoller linux
+* Xbox One controller Ubuntu
+* Ubuntu Linux Driver for the Xbox/ Xbox 360/ Xbox 360 Wireless/ Xbox One Controllers
+* Steam on Linux will no longer recognize controller
+* Steam on Linux Identify Controller
